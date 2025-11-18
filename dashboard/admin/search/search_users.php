@@ -35,9 +35,9 @@ if ($result->num_rows > 0) {
             <td>" . htmlspecialchars($row['first_name']) . " " . htmlspecialchars($row['last_name']) . "</td>
             <td>" . htmlspecialchars($row['phone_number']) . "</td>
             <td>
-                <a href='view_user.php?id=" . $row['id'] . "' class='btn btn-primary'>View</a>
-                <a href='edit_user.php?id=" . $row['id'] . "' class='btn btn-warning'>Edit</a>
-                <a href='delete_user.php?id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a>
+                <a href='view_user?id=" . $row['id'] . "' class='btn btn-primary'>View</a>
+                <a href='edit_user?id=" . $row['id'] . "' class='btn btn-warning'>Edit</a>
+                <a href='delete_user?id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a>
             </td>
         </tr>";
     }

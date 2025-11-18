@@ -147,7 +147,7 @@ $conn->close();
                                 <p class="card-text"><strong>Investment Cycle:</strong> <?php echo htmlspecialchars($product['cycle']); ?> Days</p>
                                 <p class="card-text"><strong>Price:</strong> RWF <?php echo htmlspecialchars($product['price']); ?></p>
                                 <p class="card-text text-success"><strong>Total Income:</strong> RWF <?php echo number_format($product['total_income'], 2); ?></p>
-                                <a href="purchase_compound.php?id=<?php echo $product['id']; ?>" class="btn btn-primary">
+                                <a href="purchase_compound?id=<?php echo $product['id']; ?>" class="btn btn-primary">
                                     <i class="fas fa-cart-plus icon"></i> Buy Now
                                 </a>
                             </div>
@@ -190,7 +190,7 @@ $conn->close();
                                 <p class="card-text"><strong>Investment Cycle:</strong> <?php echo htmlspecialchars($product['cycle']); ?> Days</p>
                                 <p class="card-text"><strong>Price:</strong> RWF <?php echo htmlspecialchars($product['price']); ?></p>
                                 <p class="card-text text-success"><strong>Total Income:</strong> RWF <?php echo number_format($product['total_income'], 2); ?></p>
-                                <a href="purchase_product.php?id=<?php echo $product['id']; ?>" class="btn btn-primary">
+                                <a href="purchase_product?id=<?php echo $product['id']; ?>" class="btn btn-primary">
                                     <i class="fas fa-cart-plus icon"></i> Buy Now
                                 </a>
                             </div>

@@ -102,20 +102,20 @@ if (isset($_GET['id'])) {
         </div>
 
         <div class="text-center">
-            <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-warning">Edit User</a>
-            <a href="delete_user.php?id=<?= $user['id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete User</a>
+            <a href="edit_user?id=<?= $user['id'] ?>" class="btn btn-warning">Edit User</a>
+            <a href="delete_user?id=<?= $user['id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete User</a>
 
             <!-- Deactivate Button -->
             <?php if ($user['status'] === 'active') { ?>
-                <a href="deactivate_user.php?id=<?= $user['id'] ?>" class="btn btn-secondary" onclick="return confirm('Are you sure you want to deactivate this user?')">Deactivate User</a>
+                <a href="deactivate_user?id=<?= $user['id'] ?>" class="btn btn-secondary" onclick="return confirm('Are you sure you want to deactivate this user?')">Deactivate User</a>
             <?php } else { ?>
-                <a href="activate_user.php?id=<?= $user['id'] ?>" class="btn btn-success" onclick="return confirm('Activate this user?')">Activate User</a>
+                <a href="activate_user?id=<?= $user['id'] ?>" class="btn btn-success" onclick="return confirm('Activate this user?')">Activate User</a>
             <?php } ?>
 
             <!-- Password Reset -->
-            <a href="reset_password.php?id=<?= $user['id'] ?>" class="btn btn-danger">Reset Password</a>
+            <a href="reset_password?id=<?= $user['id'] ?>" class="btn btn-danger">Reset Password</a>
 
-            <a href="manage_users.php" class="btn btn-primary">Back to Manage Users</a>
+            <a href="manage_users" class="btn btn-primary">Back to Manage Users</a>
         </div>
     </div>
 

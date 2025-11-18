@@ -163,7 +163,7 @@ $random_agent = [
                 </form>
 
                 <div class="mt-3 text-center">
-                    <a href="client_dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
+                    <a href="client_dashboard" class="btn btn-secondary">Back to Dashboard</a>
                 </div>
             </div>
         </div>

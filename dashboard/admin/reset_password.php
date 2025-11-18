@@ -33,7 +33,7 @@ if (isset($_GET['id']) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param('si', $passwordHash, $userId);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Password updated successfully!'); window.location.href='view_user.php?id=$userId';</script>";
+        echo "<script>alert('Password updated successfully!'); window.location.href='view_user?id=$userId';</script>";
     } else {
         echo "<script>alert('Error updating password!');</script>";
     }
@@ -61,7 +61,7 @@ if (isset($_GET['id']) && $_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
             </div>
             <button type="submit" class="btn btn-primary">Reset Password</button>
-            <a href="view_user.php?id=<?= $_GET['id'] ?>" class="btn btn-secondary">Cancel</a>
+            <a href="view_user?id=<?= $_GET['id'] ?>" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
 

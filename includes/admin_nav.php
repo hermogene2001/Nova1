@@ -49,7 +49,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../auth/logout.php">
+          <a class="nav-link" href="../../auth/logout">
             <i class="fas fa-sign-out-alt"></i> Logout
           </a>
         </li>

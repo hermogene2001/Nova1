@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td>" . htmlspecialchars($row['phone_number']) . "</td>
                 <td>" . htmlspecialchars($row['balance']) . "</td>
                 <td>
-                    <a href='view_user.php?id=" . $row['id'] . "' class='btn btn-primary'>View</a>
-                    <a href='edit_user.php?id=" . $row['id'] . "' class='btn btn-warning'>Edit</a>
-                    <a href='delete_user.php?id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"Are you sure?\")'>Delete</a>
+                    <a href='view_user?id=" . $row['id'] . "' class='btn btn-primary'>View</a>
+                    <a href='edit_user?id=" . $row['id'] . "' class='btn btn-warning'>Edit</a>
+                    <a href='delete_user?id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"Are you sure?\")'>Delete</a>
                 </td>
             </tr>";
         }

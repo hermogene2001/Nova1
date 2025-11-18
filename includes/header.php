@@ -12,7 +12,7 @@
         <a class="navbar-brand" href="#">DeltaOneInvestment</a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="../../auth/logout.php">Logout</a>
+                <a class="nav-link" href="../../auth/logout">Logout</a>
             </li>
         </ul>
     </nav>

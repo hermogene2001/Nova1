@@ -26,7 +26,7 @@
 <!-- Create Agent Modal -->
 <div class="modal fade" id="createAgentModal" tabindex="-1" aria-labelledby="createAgentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form method="POST" action="create_agent.php">
+        <form method="POST" action="create_agent">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createAgentModalLabel">Create New Agent</h5>
@@ -63,7 +63,7 @@
                 <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="change_password.php" method="POST">
+            <form action="change_password" method="POST">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="currentPassword" class="form-label">Current Password</label>
@@ -90,7 +90,7 @@
 <!-- Add Social Links Modal -->
 <div class="modal fade" id="addSocialLinksModal" tabindex="-1" aria-labelledby="addSocialLinksModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form method="POST" action="add_social_links.php">
+        <form method="POST" action="add_social_links">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addSocialLinksModalLabel">Add Social Links</h5>

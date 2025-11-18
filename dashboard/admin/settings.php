@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="alert alert-danger"><?= $errorMessage ?></div>
         <?php endif; ?>
 
-        <form method="POST" action="settings.php">
+        <form method="POST" action="settings">
             <div class="mb-3">
                 <label for="investment_cycle" class="form-label">Default Investment Cycle (in days)</label>
                 <input type="number" class="form-control" id="investment_cycle" name="investment_cycle" value="<?= htmlspecialchars($investmentCycle) ?>" required>

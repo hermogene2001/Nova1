@@ -223,7 +223,7 @@ $conn->close();
     <?php endif; ?>
 
     <!-- Withdrawal Form -->
-    <form action="withdrawal.php" method="POST" id="withdrawal-form">
+    <form action="withdrawal" method="POST" id="withdrawal-form">
     <div class="mb-3">
         <label for="amount" class="form-label">Withdrawal Amount</label>
         <input type="number" name="amount" id="amount" class="form-control" required placeholder="Enter Amount (in RWF)" min="3000" max="3000000">
