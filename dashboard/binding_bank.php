@@ -150,7 +150,7 @@ $conn->close();
     <?php endif; ?>
 
     <!-- Bank Binding Form -->
-    <form action="binding_bank.php" method="POST" onsubmit="return validateForm();">
+    <form action="binding_bank" method="POST" onsubmit="return validateForm();">
         <div class="mb-3">
             <label for="bank_name" class="form-label">Bank Name</label>
             <select name="bank_name" id="bank_name" class="form-control" required>

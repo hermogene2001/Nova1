@@ -259,11 +259,11 @@ $compoundProductsResult = $conn->query($compoundQuery);
                             <p><i class="fa-solid fa-calendar-days"></i> Days (Cycle): <?= htmlspecialchars($product['cycle']) ?></p>
                             <p><i class="fas fa-info-circle"></i> Status: <?= htmlspecialchars($product['status']) ?></p>
                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal<?= $product['id'] ?>"><i class="fas fa-edit"></i> Edit </button>
-                            <a href="manage_products.php?toggle_status=1&id=<?= $product['id'] ?>&status=<?= $product['status'] ?>" class="btn btn-warning btn-sm">
+                            <a href="manage_products?toggle_status=1&id=<?= $product['id'] ?>&status=<?= $product['status'] ?>" class="btn btn-warning btn-sm">
                                 <i class="fas <?= $product['status'] === 'active' ? 'fa-toggle-on' : 'fa-toggle-off' ?>"></i> 
                                 <?= $product['status'] === 'active' ? ' Deactivate' : ' Activate' ?>
                             </a>
-                            <a href="manage_products.php?delete_product=1&id=<?= $product['id'] ?>" class="btn btn-danger btn-sm">
+                            <a href="manage_products?delete_product=1&id=<?= $product['id'] ?>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i> Delete
                             </a>
                         </div>
@@ -332,11 +332,11 @@ $compoundProductsResult = $conn->query($compoundQuery);
                         <p><i class="fa-solid fa-calendar-days"></i> Days (Cycle): <?= htmlspecialchars($product['cycle']) ?></p>
                         <p><i class="fas fa-info-circle"></i> Status: <?= htmlspecialchars($product['status']) ?></p>
                         <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editCompoundProductModal<?= $product['id'] ?>"><i class="fas fa-edit"></i> Edit </button>
-                        <a href="manage_products.php?toggle_status1=1&id=<?= $product['id'] ?>&status=<?= $product['status'] ?>" class="btn btn-warning btn-sm">
+                        <a href="manage_products?toggle_status1=1&id=<?= $product['id'] ?>&status=<?= $product['status'] ?>" class="btn btn-warning btn-sm">
                             <i class="fas <?= $product['status'] === 'active' ? 'fa-toggle-on' : 'fa-toggle-off' ?>"></i> 
                             <?= $product['status'] === 'active' ? 'Deactivate' : 'Activate' ?>
                         </a>
-                        <a href="manage_products.php?delete_product_compound=1&id=<?= $product['id'] ?>" class="btn btn-danger btn-sm">
+                        <a href="manage_products?delete_product_compound=1&id=<?= $product['id'] ?>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash"></i> Delete
                         </a>
                     </div>

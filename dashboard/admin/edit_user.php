@@ -127,7 +127,7 @@ if (isset($_GET['id'])) {
             </div>
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-success">Update User</button>
-                <a href="manage_users.php" class="btn btn-secondary btn-back">Back to Manage Users</a>
+                <a href="manage_users" class="btn btn-secondary btn-back">Back to Manage Users</a>
             </div>
         </form>
     </div>

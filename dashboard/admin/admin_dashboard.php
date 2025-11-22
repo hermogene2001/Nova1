@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_agent'])) {
             <div class="card-body">
             <h5 class="card-title text-primary">Active Users</h5>
                 <p class="card-text fs4"><?= $activeUsers ?></p>
-                <button class="btn btn-outline-primary btn-sm" onclick="location.href='manage_users.php'">View Details</button>
+                <button class="btn btn-outline-primary btn-sm" onclick="location.href='manage_users'">View Details</button>
             </div>
         </div>
     </div>
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_agent'])) {
             <div class="card-body">
             <h5 class="card-title text-warning">Manage Transactions</h5>
                 <p class="card-text fs4"><?= $pendingRequests ?></p>
-                <button class="btn btn-outline-warning btn-sm" onclick="location.href='manage_transactions.php'">View Details</button>
+                <button class="btn btn-outline-warning btn-sm" onclick="location.href='manage_transactions'">View Details</button>
             </div>
         </div>
     </div>
@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_agent'])) {
             <div class="card-body">
             <h5 class="card-title text-info">Total Recharges</h5>
                 <p class="card-text fs4"><?= $totalRecharges ?></p>
-                <button class="btn btn-outline-info btn-sm" onclick="location.href='manage_recharges.php'">View Details</button>
+                <button class="btn btn-outline-info btn-sm" onclick="location.href='manage_recharges'">View Details</button>
             </div>
         </div>
     </div>
@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_agent'])) {
             <div class="card-body">
             <h5 class="card-title text-danger">Total Withdrawals</h5>
                 <p class="card-text fs4"><?= $totalWithdrawals ?></p>
-                <button class="btn btn-outline-danger btn-sm" onclick="location.href='manage_withdrawals.php'">View Details</button>
+                <button class="btn btn-outline-danger btn-sm" onclick="location.href='manage_withdrawals'">View Details</button>
             </div>
         </div>
     </div>
@@ -191,7 +191,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_agent'])) {
                 <div class="card-body">
                     <h5 class="card-title text-success">Total Products</h5>
                     <p class="card-text fs-4"><?= $product_count; ?></p>
-                    <a href="manage_products.php" class="btn btn-outline-success btn-sm">View All Products</a>
+                    <a href="manage_products" class="btn btn-outline-success btn-sm">View All Products</a>
                 </div>
             </div>
         </div>

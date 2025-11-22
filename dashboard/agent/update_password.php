@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include('nav.php'); ?>
     <div class="container mt-4">
         <h2>Update Password</h2>
-        <form method="POST" action="update_password.php">
+        <form method="POST" action="update_password">
             <div class="mb-3">
                 <label for="currentPassword" class="form-label">Current Password</label>
                 <input type="password" class="form-control" id="currentPassword" name="current_password" required>

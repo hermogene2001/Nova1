@@ -1,38 +1,39 @@
+&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- Theme CSS --&gt;
+&lt;link href=&quot;../assets/css/theme.css&quot; rel=&quot;stylesheet&quot;&gt;
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light fixed-top&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Novatech&lt;/a&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+        &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+        &lt;ul class=&quot;navbar-nav&quot;&gt;
+            &lt;li class=&quot;nav-item active&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;client_dashboard&quot;&gt;&lt;i class=&quot;fas fa-tachometer-alt&quot;&gt;&lt;/i&gt; Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;view_products&quot;&gt;&lt;i class=&quot;fas fa-box-open&quot;&gt;&lt;/i&gt; View Products&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;view_investments&quot;&gt;&lt;i class=&quot;fas fa-hand-holding-usd&quot;&gt;&lt;/i&gt; View Investments&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;profile&quot;&gt;&lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt; Profile&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;invite&quot;&gt;&lt;i class=&quot;fas fa-handshake&quot;&gt;&lt;/i&gt; Invite Friend&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;setting&quot;&gt;&lt;i class=&quot;fas fa-cogs&quot;&gt;&lt;/i&gt; Account&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#">DeltaOneInvestment</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="client_dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="view_products"><i class="fas fa-box-open"></i> View Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="view_investments"><i class="fas fa-hand-holding-usd"></i> View Investments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="profile"><i class="fas fa-user"></i> Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="invite"><i class="fas fa-handshake"></i> Invite Friend</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="setting"><i class="fas fa-cogs"></i> Account</a>
-            </li>
-        </ul>
-
-        <!-- Welcome message and profile image on the right -->
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link ml-3" href="../auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        &lt;!-- Welcome message and profile image on the right --&gt;
+        &lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link ml-3&quot; href=&quot;../auth/logout&quot;&gt;&lt;i class=&quot;fas fa-sign-out-alt&quot;&gt;&lt;/i&gt; Logout&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;

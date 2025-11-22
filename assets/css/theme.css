@@ -1,0 +1,149 @@
+/* Base styles for both themes */
+:root {
+  --primary-color: #ff69b4; /* Pink */
+  --background-color: #ffffff; /* White */
+  --text-color: #000000; /* Black */
+  --accent-color: #f0f0f0;
+  --border-color: #cccccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --primary-color: #ff69b4; /* Pink */
+  --background-color: #000000; /* Black */
+  --text-color: #ffffff; /* White */
+  --accent-color: #333333;
+  --border-color: #444444;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+/* Form container */
+.form-container {
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1.5s ease-in-out;
+  transform-origin: top;
+  border: 1px solid var(--border-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-color);
+  border: none;
+  color: var(--background-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--background-color) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Cards */
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.card-header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Platform info */
+.platform-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.platform-info h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.platform-info p {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1rem;
+}

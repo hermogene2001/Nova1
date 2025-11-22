@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="admin_dashboard.php">
-      <i class="fas fa-tachometer-alt"></i> DeltaOneInvestment
+      <i class="fas fa-tachometer-alt"></i> Novatech
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

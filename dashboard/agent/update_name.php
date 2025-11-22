@@ -75,7 +75,7 @@ $user = $result->fetch_assoc();
 <?php include('nav.php'); ?>
     <div class="container mt-4">
         <h2>Update Name</h2>
-        <form method="POST" action="update_name.php">
+        <form method="POST" action="update_name">
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="firstName" name="first_name" value="<?php echo htmlspecialchars($user['first_name']); ?>" required>

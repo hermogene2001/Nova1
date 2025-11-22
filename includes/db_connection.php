@@ -3,9 +3,9 @@
 
 // Database configuration
 $host = 'localhost';
-$username = 'bhlfebav_deltaone_investment'; // Replace with your database username
-$password = 'CVu5rU24jGQqdaUP37X2';    // Replace with your database password
-$dbname = 'bhlfebav_deltaone_investment';
+$username = 'root'; // Replace with your database username
+$password = '';    // Replace with your database password
+$dbname = 'novatech_db';
 
 // ini_set('display_errors', 2);
 // ini_set('display_startup_errors', 2);
@@ -21,13 +21,12 @@ try {
     // Set the default fetch mode to associative array
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-    // Connection successful message (for testing purposes, remove in production)
-    // echo "Database connection successful!";
+    // Also create mysqli connection for backward compatibility
     $conn = mysqli_connect($host, $username, $password, $dbname);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
 } catch (PDOException $e) {
     // Handle connection errors

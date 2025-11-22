@@ -84,12 +84,12 @@ if ($_SESSION['role'] !== 'agent') {
                                 <li class='list-group-item d-flex justify-content-between align-items-center'>
                                     User: ${item.first_name} (Phone: ${item.phone_number}) - Amount: ${item.amount} RWF
                                     <div>
-                                        <form method='POST' action='process_recharge_approve.php' onsubmit='return confirmAction("approve");'>
+                                        <form method='POST' action='process_recharge_approve' onsubmit='return confirmAction("approve");'>
                                             <input type='hidden' name='${item.type === "recharge" ? "recharge_id" : "withdrawal_id"}' value='${item.id}'>
                                             <input type='hidden' name='action' value='approve'>
                                             <button type='submit' class='btn btn-success btn-sm'>Approve</button>
                                         </form>
-                                        <form method='POST' action='process_recharge_approve.php' onsubmit='return confirmAction("reject");'>
+                                        <form method='POST' action='process_recharge_approve' onsubmit='return confirmAction("reject");'>
                                             <input type='hidden' name='${item.type === "recharge" ? "recharge_id" : "withdrawal_id"}' value='${item.id}'>
                                             <input type='hidden' name='action' value='reject'>
                                             <button type='submit' class='btn btn-danger btn-sm'>Reject</button>
