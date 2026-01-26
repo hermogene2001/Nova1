@@ -48,7 +48,7 @@ mysqli_stmt_close($stmt);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wallet - DeltaOne Investment</title>
+    <title>My Wallet - Novatech</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/all.min.css" rel="stylesheet">
     <style>
@@ -87,8 +87,8 @@ mysqli_stmt_close($stmt);
             <div class="card-body">
                 <h5 class="text-center">Current Balance: <span class="text-success"><b><?php echo number_format($current_balance, 2); ?> RWF</b></span></h5>
                 <div class="text-center mt-3">
-                    <a href="recharge.php" class="btn btn-primary">Recharge Account</a>
-                    <a href="withdrawal.php" class="btn btn-secondary">Withdraw Funds</a>
+                    <a href="recharge" class="btn btn-primary">Recharge Account</a>
+                    <a href="withdrawal" class="btn btn-secondary">Withdraw Funds</a>
                 </div>
                 <hr>
                 <h5>Transaction History</h5>

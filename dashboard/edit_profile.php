@@ -107,7 +107,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile | DeltaOne Investment</title>
+    <title>Edit Profile | Novatech</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -150,7 +150,7 @@ $conn->close();
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="edit_profile.php" enctype="multipart/form-data">
+            <form method="POST" action="edit_profile" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="first_name" class="form-label">First Name</label>
                     <input type="text" class="form-control" id="first_name" name="first_name" value="<?php echo htmlspecialchars($user['first_name']); ?>" required>

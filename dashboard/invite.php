@@ -109,7 +109,7 @@ $inviteLink = $baseURL . "?referral_code=" . urlencode($referralCode);
                 </div>
                 <button id="copyButton" class="btn btn-primary copy-button"><i class="fas fa-copy"></i> Copy Link</button>
                 <div class="already-account mt-3">
-                    <a href="client_dashboard.php" class="back-link">Go to Dashboard</a>
+                    <a href="client_dashboard" class="back-link">Go to Dashboard</a>
                 </div>
             </div>
         </div>

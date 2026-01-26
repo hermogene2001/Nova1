@@ -6,7 +6,7 @@
                 <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="add_product.php" method="POST" enctype="multipart/form-data">
+            <form action="add_product" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="productName" class="form-label">Product Name</label>
