@@ -1,0 +1,41 @@
+# Xcode
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace/
+xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+
+# Swift Package Manager
+.build/
+.swiftpm/
+*.xcframework
+
+# CocoaPods
+Pods/
+*.podlock
+
+# Carthage
+Carthage/Build
+
+# Misc
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+*.log
+
+# Generated files
+*.pbxproj~
+
+# IDE
+.idea/
+*.iml

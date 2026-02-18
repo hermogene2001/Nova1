@@ -1,0 +1,83 @@
+﻿<?php
+require_once('../includes/db.php');
+require_once('../includes/phone_util.php');
+
+// Get the search query (can be phone or name)
+$search_query = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+$sql = "SELECT * 
+FROM users 
+WHERE role != 'admin'";
+
+if (!empty($search_query)) {
+    // Search in phone number, names, and referral code
+    $sql .= " AND (phone_number LIKE ? OR fname LIKE ? OR lname LIKE ? OR referral_code LIKE ? OR CONCAT(fname, ' ', lname) LIKE ?)";
+}
+
+// Add ORDER BY clause for both cases (with or without search)
+$sql .= " ORDER BY id DESC";
+
+$stmt = $conn->prepare($sql);
+
+if (!empty($search_query)) {
+    $search = '%' . $search_query . '%';
+    // Bind the same search parameter for all LIKE conditions
+    $stmt->bind_param("sssss", $search, $search, $search, $search, $search);
+}
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    while ($user = $result->fetch_assoc()) {
+        // Format phone number for display
+        $formattedPhone = !empty($user['phone_number']) ? 
+            PhoneNumberUtil::format($user['phone_number']) : 
+            '<span class="text-muted">No phone</span>';
+        
+        // Determine status badge
+        $status = $user['status'] ?? 'active';
+        $statusClass = '';
+        switch($status) {
+            case 'active': $statusClass = 'success'; break;
+            case 'inactive': $statusClass = 'secondary'; break;
+            case 'suspended': $statusClass = 'warning'; break;
+            default: $statusClass = 'info';
+        }
+        
+        echo '<tr>';
+        echo '<td><input type="checkbox" name="selected_users[]" value="' . htmlspecialchars($user['id']) . '"></td>';
+        echo '<td>' . htmlspecialchars($user['id']) . '</td>';
+        echo '<td>' . htmlspecialchars($user['fname'] . ' ' . ($user['lname'] ?? '')) . '</td>';
+        echo '<td>' . $formattedPhone . '</td>';
+        echo '<td>' . htmlspecialchars($user['referral_code']) . '</td>';
+        echo '<td>$' . number_format($user['balance'], 2) . '</td>';
+        echo '<td><span class="badge bg-primary">' . ucfirst(htmlspecialchars($user['role'])) . '</span></td>';
+        echo '<td><span class="badge bg-' . $statusClass . '">' . ucfirst(htmlspecialchars($status)) . '</span></td>';
+        echo '<td>
+            <div class="btn-group" role="group">
+                <button class="btn btn-primary btn-sm edit-btn" 
+                        data-id="' . htmlspecialchars($user['id']) . '" 
+                        data-phone="' . htmlspecialchars($user['phone_number']) . '" 
+                        data-role="' . htmlspecialchars($user['role']) . '" 
+                        data-balance="' . htmlspecialchars($user['balance']) . '" 
+                        data-status="' . htmlspecialchars($status) . '">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <a href="../actions/reset_password.php?id=' . htmlspecialchars($user['id']) . '" class="btn btn-warning btn-sm" onclick="return confirm(\'Reset password to &quot;password123&quot;?\')">
+                    <i class="fas fa-key"></i>
+                </a>
+                <a href="../actions/delete_user.php?id=' . htmlspecialchars($user['id']) . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Delete user permanently?\')">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+        </td>';
+        echo '</tr>';
+    }
+} else {
+    echo '<tr><td colspan="9" class="text-center text-muted py-4">No users found matching your search criteria</td></tr>';
+}
+
+$stmt->close();
+$conn->close();
+?>
